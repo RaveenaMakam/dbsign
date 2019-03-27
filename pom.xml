@@ -22,7 +22,8 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <reporting>
+  
+<reporting>
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -34,6 +35,20 @@
                 </rulesets>
             </configuration>
         </plugin>
+      
+     <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <version>2.17</version>
+          <reportSets>
+            <reportSet>
+             <reports>
+                <report>checkstyle</report>
+              </reports>
+            </reportSet>
+          </reportSets>
+      </plugin>      
+      
     </plugins>
 </reporting>  
   
@@ -49,13 +64,15 @@
           <manifest>
             <addClasspath>true</addClasspath>
             <classpathPrefix>lib/</classpathPrefix>
-            <mainClass>com.dbs.training.demoproj.App</mainClass>
+            <mainClass>com.dbs.demoproj.App</mainClass>
           </manifest>
         </archive>
       </configuration>
     </plugin>
   </plugins>
-</build>  
+
+</build> 
+  
   
   
   
